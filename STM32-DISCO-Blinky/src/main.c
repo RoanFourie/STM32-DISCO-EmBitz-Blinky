@@ -11,8 +11,8 @@
 
 **********************************************************************/
 #include "stm32f10x_conf.h"
-#include "fm_stm32f4_led.h"
-#include "fm_stm32f4_delay.h"
+#include "rf_stm32f1_led.h"
+#include "rf_stm32f1_delay.h"
 
 static void button_setup(void)
 {
@@ -21,7 +21,7 @@ static void button_setup(void)
 	// Clock Enable
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 
-    // Config as digital input
+    // Configure as digital input
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
@@ -31,7 +31,7 @@ static void button_setup(void)
 
 int main(void)
 {
-  // initialize the system frequency
+    // initialize the system frequency
     SystemInit();
     // Delay initialize
     delay_init();

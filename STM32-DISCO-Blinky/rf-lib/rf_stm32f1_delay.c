@@ -1,15 +1,19 @@
-#include "fm_stm32f4_delay.h"
+/***************************************************************
+* File     : rf_stm32f1_delay.c
+***************************************************************/
+
+#include "rf_stm32f1_delay.h"
 
 static u8  fac_us=0;  // micro second count
 static u16 fac_ms=0;  // mili second count
 
 /***************************************************************
-* delay Initilize
+* delay Initialize
 ***************************************************************/
 void delay_init()
 {
 	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);	//HSI  HCLK/8
-    fac_us=SystemCoreClock/16000000;							//SYSCLK/16
+    fac_us=SystemCoreClock/16000000;						//SYSCLK/16
 	fac_ms=(u16)fac_us*1000;
 }
 
@@ -48,36 +52,3 @@ void delay_ms(u16 mili_sec)
 	SysTick->CTRL&=~SysTick_CTRL_ENABLE_Msk;
 	SysTick->VAL =0X00;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

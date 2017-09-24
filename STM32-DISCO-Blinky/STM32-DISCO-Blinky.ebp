@@ -91,14 +91,14 @@
 		<Unit filename="inc\stm32f10x_conf.h" />
 		<Unit filename="inc\system_stm32f10x.h" />
 		<Unit filename="readme.txt" />
-		<Unit filename="rf-lib\fm_stm32f4_delay.c">
+		<Unit filename="rf-lib\rf_stm32f1_delay.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="rf-lib\fm_stm32f4_delay.h" />
-		<Unit filename="rf-lib\fm_stm32f4_led.c">
+		<Unit filename="rf-lib\rf_stm32f1_delay.h" />
+		<Unit filename="rf-lib\rf_stm32f1_led.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="rf-lib\fm_stm32f4_led.h" />
+		<Unit filename="rf-lib\rf_stm32f1_led.h" />
 		<Unit filename="SPL\inc\misc.h" />
 		<Unit filename="SPL\inc\stm32f10x_adc.h" />
 		<Unit filename="SPL\inc\stm32f10x_bkp.h" />

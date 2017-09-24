@@ -20,16 +20,16 @@ Discarded input sections
  .data          0x00000000        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .bss           0x00000000        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
- .text          0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_delay.o
- .data          0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_delay.o
- .bss           0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_delay.o
+ .text          0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_delay.o
+ .data          0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_delay.o
+ .bss           0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_delay.o
  .text.delay_us
-                0x00000000       0x40 obj\release\rf-lib\fm_stm32f4_delay.o
- .text          0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_led.o
- .data          0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_led.o
- .bss           0x00000000        0x0 obj\release\rf-lib\fm_stm32f4_led.o
+                0x00000000       0x40 obj\release\rf-lib\rf_stm32f1_delay.o
+ .text          0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_led.o
+ .data          0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_led.o
+ .bss           0x00000000        0x0 obj\release\rf-lib\rf_stm32f1_led.o
  .text.FM_Led_On
-                0x00000000       0x18 obj\release\rf-lib\fm_stm32f4_led.o
+                0x00000000       0x18 obj\release\rf-lib\rf_stm32f1_led.o
  .text          0x00000000        0x0 obj\release\spl\src\misc.o
  .data          0x00000000        0x0 obj\release\spl\src\misc.o
  .bss           0x00000000        0x0 obj\release\spl\src\misc.o
@@ -1337,19 +1337,19 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x0800017c                _start
                 0x0800017c                _mainCRTStartup
  .text.delay_init
-                0x080001f0       0x3c obj\release\rf-lib\fm_stm32f4_delay.o
+                0x080001f0       0x3c obj\release\rf-lib\rf_stm32f1_delay.o
                 0x080001f0                delay_init
  .text.delay_ms
-                0x0800022c       0x40 obj\release\rf-lib\fm_stm32f4_delay.o
+                0x0800022c       0x40 obj\release\rf-lib\rf_stm32f1_delay.o
                 0x0800022c                delay_ms
  .text.FM_Led_Init
-                0x0800026c       0x3c obj\release\rf-lib\fm_stm32f4_led.o
+                0x0800026c       0x3c obj\release\rf-lib\rf_stm32f1_led.o
                 0x0800026c                FM_Led_Init
  .text.FM_Led_Off
-                0x080002a8       0x18 obj\release\rf-lib\fm_stm32f4_led.o
+                0x080002a8       0x18 obj\release\rf-lib\rf_stm32f1_led.o
                 0x080002a8                FM_Led_Off
  .text.FM_Led_Toggle
-                0x080002c0       0x1c obj\release\rf-lib\fm_stm32f4_led.o
+                0x080002c0       0x1c obj\release\rf-lib\rf_stm32f1_led.o
                 0x080002c0                FM_Led_Toggle
  .text.SysTick_CLKSourceConfig
                 0x080002dc       0x18 obj\release\spl\src\misc.o
@@ -1491,7 +1491,7 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
- .data.LED      0x20000000       0x28 obj\release\rf-lib\fm_stm32f4_led.o
+ .data.LED      0x20000000       0x28 obj\release\rf-lib\rf_stm32f1_led.o
                 0x20000000                LED
  .data.SystemCoreClock
                 0x20000028        0x4 obj\release\src\system_stm32f10x.o
@@ -1527,9 +1527,9 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x20000094                __bss_start__ = .
  *(.bss*)
  .bss           0x20000094       0x1c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .bss.fac_us    0x200000b0        0x1 obj\release\rf-lib\fm_stm32f4_delay.o
+ .bss.fac_us    0x200000b0        0x1 obj\release\rf-lib\rf_stm32f1_delay.o
  *fill*         0x200000b1        0x1 
- .bss.fac_ms    0x200000b2        0x2 obj\release\rf-lib\fm_stm32f4_delay.o
+ .bss.fac_ms    0x200000b2        0x2 obj\release\rf-lib\rf_stm32f1_delay.o
  *(COMMON)
                 0x200000b4                __bss_end__ = .
 
@@ -1547,8 +1547,8 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x20001f00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x20002000                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
-LOAD obj\release\rf-lib\fm_stm32f4_delay.o
-LOAD obj\release\rf-lib\fm_stm32f4_led.o
+LOAD obj\release\rf-lib\rf_stm32f1_delay.o
+LOAD obj\release\rf-lib\rf_stm32f1_led.o
 LOAD obj\release\spl\src\misc.o
 LOAD obj\release\spl\src\stm32f10x_adc.o
 LOAD obj\release\spl\src\stm32f10x_bkp.o
@@ -1598,9 +1598,9 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
  .ARM.attributes
                 0x0000004a       0x1b c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .ARM.attributes
-                0x00000065       0x33 obj\release\rf-lib\fm_stm32f4_delay.o
+                0x00000065       0x33 obj\release\rf-lib\rf_stm32f1_delay.o
  .ARM.attributes
-                0x00000098       0x33 obj\release\rf-lib\fm_stm32f4_led.o
+                0x00000098       0x33 obj\release\rf-lib\rf_stm32f1_led.o
  .ARM.attributes
                 0x000000cb       0x33 obj\release\spl\src\misc.o
  .ARM.attributes
@@ -1629,9 +1629,9 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
                 0x000002f3       0x1d c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
 
 .comment        0x00000000       0x6e
- .comment       0x00000000       0x6e obj\release\rf-lib\fm_stm32f4_delay.o
+ .comment       0x00000000       0x6e obj\release\rf-lib\rf_stm32f1_delay.o
                                  0x6f (size before relaxing)
- .comment       0x0000006e       0x6f obj\release\rf-lib\fm_stm32f4_led.o
+ .comment       0x0000006e       0x6f obj\release\rf-lib\rf_stm32f1_led.o
  .comment       0x0000006e       0x6f obj\release\spl\src\misc.o
  .comment       0x0000006e       0x6f obj\release\spl\src\stm32f10x_gpio.o
  .comment       0x0000006e       0x6f obj\release\spl\src\stm32f10x_rcc.o
@@ -1639,8 +1639,8 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
  .comment       0x0000006e       0x6f obj\release\src\system_stm32f10x.o
 
 .debug_info     0x00000000     0x2647
- .debug_info    0x00000000      0x219 obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_info    0x00000219      0x3e9 obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_info    0x00000000      0x219 obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_info    0x00000219      0x3e9 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_info    0x00000602      0x560 obj\release\spl\src\misc.o
  .debug_info    0x00000b62      0x891 obj\release\spl\src\stm32f10x_gpio.o
  .debug_info    0x000013f3      0x9b7 obj\release\spl\src\stm32f10x_rcc.o
@@ -1649,8 +1649,8 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
  .debug_info    0x000021dd      0x46a obj\release\src\system_stm32f10x.o
 
 .debug_abbrev   0x00000000      0xb9b
- .debug_abbrev  0x00000000      0x133 obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_abbrev  0x00000133      0x187 obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_abbrev  0x00000000      0x133 obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_abbrev  0x00000133      0x187 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_abbrev  0x000002ba      0x158 obj\release\spl\src\misc.o
  .debug_abbrev  0x00000412      0x202 obj\release\spl\src\stm32f10x_gpio.o
  .debug_abbrev  0x00000614      0x270 obj\release\spl\src\stm32f10x_rcc.o
@@ -1659,8 +1659,8 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
  .debug_abbrev  0x00000a2b      0x170 obj\release\src\system_stm32f10x.o
 
 .debug_loc      0x00000000     0x10ae
- .debug_loc     0x00000000       0x68 obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_loc     0x00000068       0x77 obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_loc     0x00000000       0x68 obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_loc     0x00000068       0x77 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_loc     0x000000df      0x193 obj\release\spl\src\misc.o
  .debug_loc     0x00000272      0x569 obj\release\spl\src\stm32f10x_gpio.o
  .debug_loc     0x000007db      0x7ca obj\release\spl\src\stm32f10x_rcc.o
@@ -1668,9 +1668,9 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
 
 .debug_aranges  0x00000000      0x2d8
  .debug_aranges
-                0x00000000       0x30 obj\release\rf-lib\fm_stm32f4_delay.o
+                0x00000000       0x30 obj\release\rf-lib\rf_stm32f1_delay.o
  .debug_aranges
-                0x00000030       0x38 obj\release\rf-lib\fm_stm32f4_led.o
+                0x00000030       0x38 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_aranges
                 0x00000068       0x40 obj\release\spl\src\misc.o
  .debug_aranges
@@ -1685,28 +1685,28 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
                 0x000002b0       0x28 obj\release\src\system_stm32f10x.o
 
 .debug_ranges   0x00000000      0x288
- .debug_ranges  0x00000000       0x20 obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_ranges  0x00000020       0x28 obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_ranges  0x00000000       0x20 obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_ranges  0x00000020       0x28 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_ranges  0x00000048       0x30 obj\release\spl\src\misc.o
  .debug_ranges  0x00000078       0x98 obj\release\spl\src\stm32f10x_gpio.o
  .debug_ranges  0x00000110      0x130 obj\release\spl\src\stm32f10x_rcc.o
  .debug_ranges  0x00000240       0x10 obj\release\src\main.o
  .debug_ranges  0x00000250       0x38 obj\release\src\system_stm32f10x.o
 
-.debug_line     0x00000000     0x10d1
- .debug_line    0x00000000      0x1ae obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_line    0x000001ae      0x1d8 obj\release\rf-lib\fm_stm32f4_led.o
- .debug_line    0x00000386      0x1ae obj\release\spl\src\misc.o
- .debug_line    0x00000534      0x357 obj\release\spl\src\stm32f10x_gpio.o
- .debug_line    0x0000088b      0x446 obj\release\spl\src\stm32f10x_rcc.o
- .debug_line    0x00000cd1      0x1b6 obj\release\src\main.o
- .debug_line    0x00000e87       0xa4 obj\release\src\startup_stm32f10x_ld_vl.o
- .debug_line    0x00000f2b      0x1a6 obj\release\src\system_stm32f10x.o
+.debug_line     0x00000000     0x10d0
+ .debug_line    0x00000000      0x1ae obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_line    0x000001ae      0x1d7 obj\release\rf-lib\rf_stm32f1_led.o
+ .debug_line    0x00000385      0x1ae obj\release\spl\src\misc.o
+ .debug_line    0x00000533      0x357 obj\release\spl\src\stm32f10x_gpio.o
+ .debug_line    0x0000088a      0x446 obj\release\spl\src\stm32f10x_rcc.o
+ .debug_line    0x00000cd0      0x1b6 obj\release\src\main.o
+ .debug_line    0x00000e86       0xa4 obj\release\src\startup_stm32f10x_ld_vl.o
+ .debug_line    0x00000f2a      0x1a6 obj\release\src\system_stm32f10x.o
 
 .debug_str      0x00000000      0xd44
- .debug_str     0x00000000      0x224 obj\release\rf-lib\fm_stm32f4_delay.o
+ .debug_str     0x00000000      0x224 obj\release\rf-lib\rf_stm32f1_delay.o
                                 0x27a (size before relaxing)
- .debug_str     0x00000224      0x22c obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_str     0x00000224      0x22c obj\release\rf-lib\rf_stm32f1_led.o
                                 0x3f2 (size before relaxing)
  .debug_str     0x00000450      0x20b obj\release\spl\src\misc.o
                                 0x413 (size before relaxing)
@@ -1720,8 +1720,8 @@ OUTPUT(bin\Release\STM32-DISCO-Blinky.elf elf32-littlearm)
                                 0x32c (size before relaxing)
 
 .debug_frame    0x00000000      0x628
- .debug_frame   0x00000000       0x60 obj\release\rf-lib\fm_stm32f4_delay.o
- .debug_frame   0x00000060       0x64 obj\release\rf-lib\fm_stm32f4_led.o
+ .debug_frame   0x00000000       0x60 obj\release\rf-lib\rf_stm32f1_delay.o
+ .debug_frame   0x00000060       0x64 obj\release\rf-lib\rf_stm32f1_led.o
  .debug_frame   0x000000c4       0x6c obj\release\spl\src\misc.o
  .debug_frame   0x00000130      0x1b0 obj\release\spl\src\stm32f10x_gpio.o
  .debug_frame   0x000002e0      0x244 obj\release\spl\src\stm32f10x_rcc.o
