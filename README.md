@@ -1,7 +1,7 @@
 Date: 2017-Week-38  
 Status: In Progress.  
 
-# Blink the LED when User Button is pressed on the STM32 NUCLEO-F411RE board (STM32F411RET6)  
+# Blink the LED when User Button is pressed on the Value Line STM32-Discovery board (STM32F100RBT6B)  
 On startup the Green LED will blink and the Blue one will stay ON. When the User Button is pressed the Green LED will stay on and the Blue LED will blink.  
 ## Introduction:  
 Getting started with the STM32-Discovery board using the free [EmBitz IDE](https://www.embitz.org/) on Windows.  
