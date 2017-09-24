@@ -6,7 +6,6 @@ On startup the Green LED will blink and the Blue one will stay ON. When the User
 ## Introduction:  
 Getting started with the STM32-Discovery board using the free [EmBitz IDE](https://www.embitz.org/) on Windows.  
 To blink the LED when the User Button is pressed.  
-Based on [this article](./User Manuals/isildak_en.pdf) and used [this article](http://www.firmcodes.com/stm32f407-discovery-gpio-tu) to get it working.  
 Flashed firmware hex file using [ST-Link Utility](http://www.st.com/en/development-tools/stsw-link004.html).  
 
 ---
